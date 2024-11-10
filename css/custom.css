@@ -1,0 +1,95 @@
+.post-content h1{
+    font-size: 1.8em;
+}
+
+.post-content h2{
+    font-size: 1.5em;
+}
+
+/*********** Code Block ***********/
+
+.post-content pre {
+    position: relative;
+    padding-top: 2.5rem;  /* Extra space for title bar */
+    background: var(--code-block-bg);
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Window controls container */
+.post-content pre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.1);  /* Slightly lighter than code area */
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Window control buttons */
+.post-content pre::after {
+    content: '';
+    position: absolute;
+    top: 0.7rem;
+    left: 1rem;
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #ff5f56;  /* Red button */
+    border-radius: 50%;
+    box-shadow: 
+        1.2rem 0 0 #ffbd2e,  /* Yellow button */
+        2.4rem 0 0 #27c93f;  /* Green button */
+}
+
+/* Code block styling */
+.post-content pre code {
+    display: block;
+    padding: 0rem 0rem 1rem 2rem;
+    color: rgb(213, 213, 214);
+    background: transparent !important;  /* Remove code background as pre handles it */
+    overflow-x: auto;
+    word-break: normal;
+    line-height: 1.6;
+    font-size: 0.7em;
+}
+
+/** image caption **/
+
+.post-content img{
+    margin: 0 auto;
+}
+
+.image-caption {
+    text-align: center;
+    margin: 1.5em 0;
+}
+
+.image-caption img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/** Numbering **/
+
+.post-content {
+    counter-reset: figure-counter;
+}
+
+.numbered-figure figcaption::before {
+    counter-increment: figure-counter;
+    content: "Figure " counter(figure-counter) ". ";
+}
+
+.post-content figure > figcaption {
+    color: #666 !important;
+    margin-top: 0.1em;
+    font-weight: 400;
+    text-align: center;
+    opacity: 0.7;
+    font-family:Georgia, 'Songti SC', Times, serif;
+}
