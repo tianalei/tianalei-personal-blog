@@ -1,19 +1,40 @@
-/*Font size*/
-.post-content {
-    font-size: 0.8em;  /* 调整整体字体大小(默认1em=16px) */
-    line-height: 1.5;  /* 保持合适的行高 */
+.main{
+    padding: 0 1.6rem;
 }
-.post-title{
-    font-size: 1.7em;
+/*Font*/
+.post-content {
+    font-size: 0.85em;  /* 整体字体大小(默认1em=16px) */
+    line-height: 1.6rem;  /* 保持合适的行高 */
+    hyphens: auto;
+}
+.post-content p{
+    text-align: justify;
+    -webkit-hyphens: auto;
+    font-kerning: normal;
+}
+.post-title {
+    margin-bottom: 1rem;
+    font-size: 1.6em;
 }
 .post-content h1{
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 .post-content h2{
-    font-size: 1.3em;
+    font-size: 1.2em;
+    margin: 1.3em auto 0.8em;
 }
 .post-content code {
     font-size: 0.7em; 
+}
+
+/** toc **/
+.toc {
+    font-size: small;
+    margin: 0 0.2em 1em;
+    border: 1px solid var(--border);
+    background: var(--code-bg);
+    border-radius: var(--radius);
+    padding: .1em;
 }
 
 /*********** Code Block ***********/
@@ -57,7 +78,7 @@
 /* Code block styling */
 .post-content pre code {
     display: block;
-    padding: 0rem 0rem 1rem 2rem;
+    padding: 0rem 0rem 0.8rem 1.5rem;
     color: rgb(213, 213, 214);
     background: transparent !important;  /* Remove code background as pre handles it */
     overflow-x: auto;
@@ -100,6 +121,7 @@
     font-weight: 400;
     text-align: center;
     opacity: 0.7;
+    font-size: small;
     font-family:Georgia, 'Songti SC', Times, serif;
 }
 
