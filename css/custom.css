@@ -1,9 +1,19 @@
-.post-content h1{
-    font-size: 1.8em;
+/*Font size*/
+.post-content {
+    font-size: 0.8em;  /* 调整整体字体大小(默认1em=16px) */
+    line-height: 1.5;  /* 保持合适的行高 */
 }
-
-.post-content h2{
+.post-title{
+    font-size: 1.7em;
+}
+.post-content h1{
     font-size: 1.5em;
+}
+.post-content h2{
+    font-size: 1.3em;
+}
+.post-content code {
+    font-size: 0.7em; 
 }
 
 /*********** Code Block ***********/
@@ -53,7 +63,6 @@
     overflow-x: auto;
     word-break: normal;
     line-height: 1.6;
-    font-size: 0.7em;
 }
 
 /** image caption **/
@@ -133,7 +142,7 @@ details[open] summary::before {
 .post-content ol {
     font-size: 0.95em;
     line-height: 1.4;
-    padding-inline-start: 40px;  /* Increase from 20px */
+    padding-inline-start: 30px;  /* Increase from 20px */
     margin-bottom: 0.8rem;       /* Reduce vertical spacing between lists */
 }
 .post-content li {
@@ -143,7 +152,7 @@ details[open] summary::before {
 }
 .post-content li ul,
 .post-content li ol {
-    padding-inline-start: 40px;
+    padding-inline-start: 30px;
     font-size: 0.95em;     /* 二级列表为父级的95% */
     line-height: 1.35;
 }
