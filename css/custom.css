@@ -127,3 +127,23 @@ summary::before {
 details[open] summary::before {
     content: "▼"; 
 }
+
+/* Modify list spacing and indentation */
+.post-content ul,
+.post-content ol {
+    font-size: 0.95em;
+    line-height: 1.4;
+    padding-inline-start: 40px;  /* Increase from 20px */
+    margin-bottom: 0.8rem;       /* Reduce vertical spacing between lists */
+}
+.post-content li {
+    margin-top: 3px;            /* Reduce line spacing between list items */
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+.post-content li ul,
+.post-content li ol {
+    padding-inline-start: 40px;
+    font-size: 0.95em;     /* 二级列表为父级的95% */
+    line-height: 1.35;
+}
